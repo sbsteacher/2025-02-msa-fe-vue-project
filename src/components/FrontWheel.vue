@@ -1,15 +1,17 @@
 <script setup>
 import Tire from './Tire.vue';    
+const page = 'history';
 </script>
 
 <template>
     <div class="front-wheel">        
-        <span>FRONT WHEEL</span>
-        <tire />
+        <span :id="page">FRONT WHEEL</span>
+        <tire color="RED" />
     </div>
 </template>
 
 <style scoped>
+#history { text-decoration: underline; }    
 .front-wheel {
     border: 1px solid black;
     border-radius: 50%;

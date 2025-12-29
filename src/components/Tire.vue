@@ -5,6 +5,6 @@ const props = defineProps({
 });
 </script>
 
-<template>
-    <div :style="{ color: props.color }">{{ props.color || 'BLACK' }} TIRE</div>
+<template>    
+    <div :style="{ color: props.color }">{{ props.color || 'BLACK' }} TIRE</div>    
 </template>

@@ -1,18 +1,18 @@
-<!-- 로직 담당 -->
 <script setup>
-import FrontWheel from '@/components/FrontWheel.vue';
-import RearWheel from './components/RearWheel.vue';
+
 </script>
 
-<!-- 화면 (View) 담당 -->
 <template>
-  <front-wheel></front-wheel>
-  <rear-wheel />
+  <div>
+    <nav>
+      <router-link to="/component">컴포넌트</router-link>
+    </nav>
+    <main>
+      <router-view />
+    </main>
+  </div>
 </template>
 
-<!--
-컴포넌트(Component): 재사용 가능한 요소
+<style scoped>
 
-쉽게 생각해 자동차 부품이라고 봐도 된다. 
-
--->
+</style>
