@@ -6,8 +6,8 @@ import RearWheel from './components/RearWheel.vue';
 
 <!-- 화면 (View) 담당 -->
 <template>
-  <FrontWheel></FrontWheel>
-  <RearWheel />
+  <front-wheel></front-wheel>
+  <rear-wheel />
 </template>
 
 <!--

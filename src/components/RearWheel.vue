@@ -1,8 +1,11 @@
-<script setup></script>
+<script setup>
+import Tire from './Tire.vue';    
+</script>
 
 <template>
     <div class="rear-wheel">        
         <span>REAR WHEEL</span>
+        <tire />
     </div>
 </template>
 
