@@ -6,6 +6,7 @@
   <div>
     <nav>
       <router-link to="/component">컴포넌트</router-link>
+      <router-link to="/page98">Page98</router-link>
     </nav>
     <main>
       <router-view />
