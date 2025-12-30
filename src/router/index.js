@@ -15,7 +15,7 @@ const router = createRouter({
 
     // [ {
     //   path: '/component',
-    //   component: () => import('@/views/Component.vue')
+    //   component: () => import('../views/Component.vue')
     // },
     // {
     //   path: '/page98',
@@ -55,11 +55,11 @@ const router = createRouter({
     // },
     // {
     //   path: '/mission01',
-    //   component: () => import('@/views/mission/Mission01.vue')
+    //   component: () => import('../views/mission/Mission01.vue')
     // }
   //]
   
-})
+});
 
 
 
