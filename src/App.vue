@@ -1,15 +1,11 @@
 <script setup>
-const routerList = [ 'component', 'page98', 'page103', 'page108', 'page110'
-                  , 'page114', 'page118', 'page123', 'page125'
-                  , 'mission01'                   
-                  ];
-
+import { globalState } from '@/globalState';
 </script>
 
 <template>
   <div>
     <nav>
-      <router-link v-for="item in routerList" :to="`/${item}`" :key="item">{{ item }}</router-link>
+      <router-link v-for="item in globalState" :to="`/${item}`" :key="item">{{ item }}</router-link>
       <!-- <router-link to="/component">component</router-link>
       <router-link to="/page98">page98</router-link>
       <router-link to="/page103">page103</router-link>
