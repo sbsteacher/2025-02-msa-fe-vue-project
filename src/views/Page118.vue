@@ -27,6 +27,7 @@ const computedMvpName = computed( () => {
     return state.players.find(item => item.id === state.mvpId)?.name || '없음';
 } );
 
+const increseMvpId = () => state.mvpId++ ;
 </script>
 
 <template>
@@ -49,8 +50,9 @@ const computedMvpName = computed( () => {
         <div>{{ computedMvpName }}</div>
         <div>{{ computedMvpName }}</div>
     </div>
-    <!-- 미니 미션 -->
-    
+    <div>{{ state.mvpId }}</div>
+    <!-- 미니 미션, 버튼을 클릭하면 mvpId가 1씩 올라가게 해주세요. -->
+    <button @click="increseMvpId">mvpId 증가</button>
 </div>
 </template>
 
