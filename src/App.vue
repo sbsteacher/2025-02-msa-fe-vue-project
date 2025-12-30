@@ -1,6 +1,6 @@
 <script setup>
 const routerList = [ 'component', 'page98', 'page103', 'page108', 'page110'
-                  , 'page114'
+                  , 'page114', 'page118'
                   , 'mission01'                   
                   ];
 
