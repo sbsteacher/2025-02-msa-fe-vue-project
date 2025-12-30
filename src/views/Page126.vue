@@ -20,7 +20,7 @@ onMounted(() => {
 <h3>Page126</h3>
 <!-- state.imgList에 있는 자료로 img를 화면에 뿌려주세요. 
 src로 쓸 데이터는 각 객체의 download_url 속성에 있습니다. -->
-
+<img v-for="item in state.imgList" :src="item.download_url">
 </template>
 
 <style scoped>
