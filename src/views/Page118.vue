@@ -9,6 +9,19 @@ const state = reactive({
         , { id: 12, name: 'James Park' }
     ]
 });
+
+const getMvpName = () => {
+    // if(state.mvpId) {
+    //     const player = state.players.find(item => item.id === state.mvpId);
+    //     if(player) {
+    //         return player.name;
+    //     }
+    // }
+    // return '없음';
+    console.log('call getMvpName');
+    return state.players.find(item => item.id === state.mvpId)?.name || '없음';
+}
+
 </script>
 
 <template>
@@ -17,9 +30,11 @@ const state = reactive({
     <h1>오늘의 MVP</h1>
     <div>
         <template v-if="state.mvpId">
-            {{ state.players.find(m => m.id === state.mvpId)?.name || '없음' }}
+            {{ state.players.find(item => item.id === state.mvpId)?.name || '없음1' }}
         </template>
-        <template v-else>없음</template>
+        <template v-else>없음2</template>
+        <hr>
+        <div>{{ getMvpName() }}</div>
     </div>
 </div>
 </template>
