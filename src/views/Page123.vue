@@ -4,7 +4,7 @@ import { reactive } from 'vue';
 const state = reactive({ 
     player: 'Kim',
     name: 'Hong'
-})
+});
 </script>
 
 <template>
