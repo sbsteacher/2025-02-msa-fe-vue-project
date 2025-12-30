@@ -1,5 +1,5 @@
 <script setup>
-import { reactive } from 'vue';
+import { computed, reactive } from 'vue';
 
 const state = reactive({
     mvpId: 7,
@@ -22,6 +22,11 @@ const getMvpName = () => {
     return state.players.find(item => item.id === state.mvpId)?.name || '없음';
 }
 
+const computedMvpName = computed( () => {
+    console.log('call computedMvpName');
+    return state.players.find(item => item.id === state.mvpId)?.name || '없음';
+} );
+
 </script>
 
 <template>
@@ -34,8 +39,18 @@ const getMvpName = () => {
         </template>
         <template v-else>없음2</template>
         <hr>
+        <!-- 함수는 호출할 때마다 함수 안의 코드가 실행이 된다. -->
         <div>{{ getMvpName() }}</div>
+        <div>{{ getMvpName() }}</div>
+        <div>{{ getMvpName() }}</div>
+        <hr>
+        <!-- 컴퓨티드는 보낸 콜백함수가 딱 한번만 실행이되고 결과가 return -->
+        <div>{{ computedMvpName }}</div>
+        <div>{{ computedMvpName }}</div>
+        <div>{{ computedMvpName }}</div>
     </div>
+    <!-- 미니 미션 -->
+    
 </div>
 </template>
 
