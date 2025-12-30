@@ -1,11 +1,12 @@
 <script setup>
 import Tire from './Tire.vue';    
+const RED = 'blue';
 </script>
 
 <template>
     <div class="rear-wheel">        
         <span>REAR WHEEL</span>
-        <tire />
+        <tire :color="RED" />
     </div>
 </template>
 

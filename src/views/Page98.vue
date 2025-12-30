@@ -2,7 +2,7 @@
 let loading = false;
 
 const parent = ['fruits', 'abc'];
-const child = 'item';
+const child = 'item ggg';
 /* class 바인딩과 배열의 조합은 배열의 아이템이 클래스에 무조건 추가가 되지만
 class 바인딩과 객체의 조합은 객체의 속성마다 추가가 될지 무시할지 결정할 수 있다.
 속성명:boolean  (속성명을 클래스값으로 false면 무시, true면 추가)
@@ -14,7 +14,8 @@ const hidden = { fruit: false, abc: false };
 const rect = {
     backgroundColor: 'red',
     width: '200px',
-    height: '100px'
+    height: '100px',
+    justifyContent: 'center'
 };
 </script>
 

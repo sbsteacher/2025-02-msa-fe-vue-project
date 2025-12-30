@@ -1,5 +1,5 @@
 <script setup>
-import Tire from './Tire.vue';    
+import Tire from './Tire.vue';
 const page = 'history';
 </script>
 

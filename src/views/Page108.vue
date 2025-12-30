@@ -1,5 +1,6 @@
 <script setup>
 const pop = message => alert(message);
+
 const test = () => alert('테스트');
 </script>
 

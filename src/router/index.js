@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -23,6 +22,10 @@ const router = createRouter({
     {
       path: '/page110',
       component: () => import('@/views/Page110.vue')
+    },
+    {
+      path: '/page114',
+      component: () => import('@/views/Page114.vue')
     },
     {
       path: '/mission01',
