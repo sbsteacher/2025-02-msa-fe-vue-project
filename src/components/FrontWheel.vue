@@ -1,5 +1,6 @@
 <script setup>
 import Tire from './Tire.vue';
+import { useCounterStore } from '@/stores/counter';
 const page = 'history';
 </script>
 
