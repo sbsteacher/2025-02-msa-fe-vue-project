@@ -2,7 +2,7 @@
 import { reactive } from 'vue';
 const state = reactive({
     form: {
-        id: '',
+        id: 'abc',
         pw: ''
     }
 });

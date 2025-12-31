@@ -9,18 +9,29 @@ const state = reactive({
 onMounted(() => {
     console.log('onMounted');
     axios.get('https://picsum.photos/v2/list')
-            .then( res => {
+            .then( res => {            
                 state.imgList = res.data
                 console.log(res.data);
             } );
 });
+
+const changeSizeUrl = item => {
+    const width = parseInt(item.width * 0.1);
+    const height = parseInt(item.height * 0.1);
+    return `https://picsum.photos/id/${item.id}/${width}/${height}`;
+}
 </script>
 
 <template>
 <h3>Page126</h3>
 <!-- state.imgList에 있는 자료로 img를 화면에 뿌려주세요. 
 src로 쓸 데이터는 각 객체의 download_url 속성에 있습니다. -->
-<img v-for="item in state.imgList" :src="item.download_url">
+<div v-for="item in state.imgList" :key="item.id">
+    <img :src="changeSizeUrl(item)" :alt="item.author">
+    <div>{{ item.author }}</div>
+</div>
+
+<!-- <img v-for="item in state.imgList" :src="item.download_url"> -->
 </template>
 
 <style scoped>

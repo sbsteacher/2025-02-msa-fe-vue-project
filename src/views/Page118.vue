@@ -2,7 +2,7 @@
 import { computed, reactive } from 'vue';
 
 const state = reactive({
-    mvpId: 7,
+    mvpId: 6,
     players: [
         { id: 7, name: 'John Doe' }
         , { id: 9, name: 'Jane Lee' }
