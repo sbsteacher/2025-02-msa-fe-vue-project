@@ -2,12 +2,16 @@
 import Tire from './Tire.vue';
 import { useCounterStore } from '@/stores/counter';
 const page = 'history';
+
+//counterStore에는 { count, doubleCount, increment } 객체 주소값이 넘어온다.
+const counterStore = useCounterStore();
 </script>
 
 <template>
     <div class="front-wheel">        
         <span :id="page">FRONT WHEEL</span>
         <tire color="RED" />
+        <div>TIMES: {{ counterStore.count }}</div>
     </div>
 </template>
 
