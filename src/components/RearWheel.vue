@@ -11,6 +11,7 @@ const counterStore = useCounterStore();
         <tire :color="RED" />
         <div>TIMES: {{ counterStore.count }}</div>
         <button @click="counterStore.increment">회전</button>
+        <button @click="counterStore.decrement">역회전</button>
     </div>
 </template>
 
