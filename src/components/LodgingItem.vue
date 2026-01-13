@@ -33,6 +33,4 @@ const props = defineProps({
 .item:not(:first-child) { margin-left: 10px; }
 .item img { width: 200px; }
 svg { display: inline !important; }
-div.sections { width: 80vw; }
-div.sections:not(:first-child) { margin-top: 30px; }
 </style>

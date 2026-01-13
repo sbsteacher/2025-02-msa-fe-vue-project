@@ -35,7 +35,7 @@ onMounted(async () => {
               :alt="subItem.title"
               :title="subItem.title"
               :period="subItem.structuredContent.primaryLine[0].body"
-              :price="subItem.structuredDisplayPrice.primaryLine.price"
+              :price="subItem.structuredDisplayPrice.primaryLine.accessibilityLabel"
               :rating="subItem.avgRatingLocalized"
               :badge="subItem.badges.length ? subItem.badges[0].text: ''"
           />
@@ -58,4 +58,7 @@ onMounted(async () => {
 
 <style scoped>
 .d-flex { display: flex; overflow-x: scroll; }
+div.sections { width: 80vw; }
+div.sections:not(:first-child) { margin-top: 30px; }
+svg { display: inline !important; }
 </style>
