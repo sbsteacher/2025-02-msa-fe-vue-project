@@ -9,7 +9,7 @@ const state = reactive({
 onMounted(async () => {
   axios.get('/airbnb.json').then((res) => {
     state.sections = res.data.sections;
-    console.log(state.sections);
+    console.log(res.data.sections);
   });
 });
 </script>
@@ -30,6 +30,7 @@ onMounted(async () => {
         <div class="d-flex">
           <div v-for="subItem in item.sectionData.items" :key="subItem.demandStayListing.id" class="item">
             <img :src="subItem.contextualPictures[0].picture" alt="">
+            <div>타이틀</div>
           </div>
         </div>
     </div>
