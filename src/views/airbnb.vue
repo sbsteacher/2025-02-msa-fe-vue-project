@@ -27,7 +27,8 @@ onMounted(async () => {
           style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
           <path fill="none"d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28"></path></svg>
         </span>
-        <div class="d-flex">
+        <div class="d-flex">          
+          <!-- 
           <div v-for="subItem in item.sectionData.items" :key="subItem.demandStayListing.id" class="item po-rel">
             <img :src="subItem.contextualPictures[0].picture" alt="">
             <div>{{ subItem.title }}</div>
@@ -38,27 +39,12 @@ onMounted(async () => {
             </div>
             <div v-if="subItem.badges.length" class="badge">{{ subItem.badges[0].text }}</div>
           </div>          
-        </div>
+          -->
+        </div>   
     </div>
   </div>
 </template>
 
 <style scoped>
 .d-flex { display: flex; overflow-x: scroll; }
-.po-rel { position: relative; }
-
-.po-rel .badge { position: absolute; top: 10px; left: 10px; 
-  background-color: #ffffffab; padding: 5px 8px; 
-  border-radius: 10%;
-}
-
-.d-flex .item { width: 200px; }
-.d-flex .item img { width: 200px; }
-svg {
-  display: inline !important;
-}
-div.sections { width: 80vw; }
-div.sections:not(:first-child) {
-  margin-top: 30px;
-}
 </style>
